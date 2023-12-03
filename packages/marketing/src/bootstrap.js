@@ -1,10 +1,17 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+
 // Mount function to start up the app
 const mount = (el) => {
   const root = createRoot(el);
-  root.render(<h1>Hi there!</h1>);
+  root.render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
 };
 
 // If we are in development and in isolation,
