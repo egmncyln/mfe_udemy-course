@@ -1,0 +1,76 @@
+$spacingUnit: 8px; // Define your spacing unit
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.heroContent {
+  padding: #{$spacingUnit * 8} 0 #{$spacingUnit * 6};
+}
+
+.toolbar {
+  flex-wrap: wrap;
+}
+
+.toolbarTitle {
+  flex-grow: 1;
+}
+
+.link {
+  margin: #{$spacingUnit} #{$spacingUnit * 1.5};
+}
+
+.cardHeader {
+  background-color: #eeeeee;
+}
+
+.cardPricing {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-bottom: #{$spacingUnit * 2};
+}
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  margin-top: #{$spacingUnit * 8};
+  padding-top: #{$spacingUnit * 3};
+  padding-bottom: #{$spacingUnit * 3};
+
+  @media (min-width: 600px) {
+    padding-top: #{$spacingUnit * 6};
+    padding-bottom: #{$spacingUnit * 6};
+  }
+}

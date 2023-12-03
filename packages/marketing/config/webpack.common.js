@@ -14,6 +14,21 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.module\.scss$/, // Match *.module.scss files
+        use: [
+          "style-loader", // Inject CSS into the DOM
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[name]__[local]--[hash:base64:5]", // Class name format
+              },
+            },
+          },
+          "sass-loader", // Compile Sass to CSS
+        ],
+      },
     ],
   },
 };

@@ -1,0 +1,34 @@
+$spacingUnit: 8px; // Define your spacing unit
+
+.heroContent {
+  background-color: #fff;
+  padding: #{$spacingUnit * 8} 0 #{$spacingUnit * 6};
+}
+
+.heroButtons {
+  margin-top: $spacingUnit * 4;
+}
+
+.cardGrid {
+  padding-top: $spacingUnit * 8;
+  padding-bottom: $spacingUnit * 8;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .cardMedia {
+    padding-top: 56.25%; // 16:9
+  }
+
+  .cardContent {
+    flex-grow: 1;
+  }
+}
+
+.footer {
+  background-color: #fff;
+  padding: $spacingUnit * 6;
+}
