@@ -1,16 +1,18 @@
 module.exports = {
+  entry: "./src/index.ts", // Entry point of your application
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"], // File extensions to support
+  },
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.(ts|tsx)$/, // Match TypeScript files
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-react", "@babel/preset-env"],
-            plugins: ["@babel/plugin-transform-runtime"],
+        use: [
+          {
+            loader: "ts-loader", // Use ts-loader for TypeScript files
           },
-        },
+        ],
       },
     ],
   },

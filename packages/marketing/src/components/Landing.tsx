@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -67,7 +66,7 @@ export default function Landing() {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <>
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
@@ -161,6 +160,6 @@ export default function Landing() {
         <Copyright />
       </footer>
       {/* End footer */}
-    </React.Fragment>
+    </>
   );
 }
