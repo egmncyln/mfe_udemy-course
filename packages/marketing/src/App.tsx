@@ -1,7 +1,7 @@
 import Landing from "./components/Landing";
 import Pricing from "./components/Pricing";
 
-export default function App() {
+function App() {
   return (
     <>
       <Landing />
@@ -9,3 +9,5 @@ export default function App() {
     </>
   );
 }
+
+export default App;
